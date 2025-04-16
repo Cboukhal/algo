@@ -26,3 +26,15 @@ DÉBUT
     Écrire "le périmètre d'un rectangle dont la largeur est de",a , "et dont la longueur est de ",b, "sera de ",2 * (a + b);
 }
 FIN
+
+algo:algo3;
+VARIABLES
+    a,b,c,d,e entier;
+DÉBUT
+{
+    // Votre algorithme ici ! 🤓
+    Écrire "Saisisser 5 chiffres";
+    Lire a, b, c ,d ,e;
+    Écrire "la moyenne est de" ,(a+b+c+d+e)/5,"/20";
+}
+FIN
