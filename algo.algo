@@ -1,0 +1,13 @@
+
+DÉBUT
+    // Votre algorithme ici ! 🤓
+    Écrire "saisser un entier";
+    Lire a;
+    Écrire "saisser un entier";
+    Lire b;
+    Écrire a + b;
+    Écrire a - b;
+    Écrire a * b;
+    Écrire a / b;
+    Écrire a % b;
+FIN
