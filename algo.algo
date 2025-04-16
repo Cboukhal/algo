@@ -5,9 +5,14 @@ DÉBUT
     Lire a;
     Écrire "saisser un entier";
     Lire b;
-    Écrire a + b;
-    Écrire a - b;
-    Écrire a * b;
-    Écrire a / b;
-    Écrire a % b;
+    Écrire "la somme de a + b = "a + b;
+    Écrire "la somme de a - b = "a - b;
+    Écrire "la somme de a * b = "a * b;
+    Écrire "la somme de a / b = "a / b;
+    Écrire "la somme de a % b = "a % b;
+FIN
+
+DÉBUT
+    // Votre algorithme ici ! 🤓
+    
 FIN
