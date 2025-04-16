@@ -5,14 +5,24 @@ DÉBUT
     Lire a;
     Écrire "saisser un entier";
     Lire b;
-    Écrire "la somme de a + b = "a + b;
-    Écrire "la somme de a - b = "a - b;
-    Écrire "la somme de a * b = "a * b;
-    Écrire "la somme de a / b = "a / b;
-    Écrire "la somme de a % b = "a % b;
+    Écrire "la somme de a + b = ",a + b;
+    Écrire "la somme de a - b = ",a - b;
+    Écrire "la somme de a * b = ",a * b;
+    Écrire "la somme de a / b = ",a / b;
+    Écrire "la somme de a % b = ",a % b;
 FIN
 
+algo:algo2;
+VARIABLES
+    a,b entier;
 DÉBUT
+{
     // Votre algorithme ici ! 🤓
-    
+    Écrire "Saisisser le rayon d'un cercle";
+    Lire a;
+    Écrire "La surface d'un cercle de rayon", a ,"et de", a * a * Π;
+    Écrire "Saisisser la largeur d'un rectancle et saisisser la longueur d'un rectangle";
+    Lire a, b;
+    Écrire "le périmètre d'un rectangle dont la largeur est de",a , "et dont la longueur est de ",b, "sera de ",2 * (a + b);
+}
 FIN
