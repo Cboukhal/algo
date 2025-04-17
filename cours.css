@@ -1,0 +1,41 @@
+*{
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 10px;
+}
+h1{
+    font-size: 2em;
+    color: rgb(141, 22, 22);
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5em;
+}
+h2{
+    font-size: 1.5em;
+}
+h2,
+h1,
+h3,
+h4{
+    color: rgb(141, 22, 22);
+    font-weight: bold;
+}
+ul{
+    list-style: none;}
+/********************** header **********************/
+
+header{
+    /* flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; */
+    text-align: justify;
+}
+.Definition{
+    color: rgb(11, 172, 11);
+}
+.partie{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1px solid black;
+}
