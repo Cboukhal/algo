@@ -96,10 +96,37 @@ DÉBUT
 {
     Écrire "Donner moi une année ";
     Lire a;
-    Si (((a%4 == 0) || (a%400 ==0)) && a%100 != 0)Alors{
+    Si (((a%4 == 0) || (a%400 == 0)) && (a%100 != 0))Alors{
         Écrire "C'est une anné bissextile";
     Sinon
         Écrire "Ce n'est pas une anné bissextile";
+    }FinSi
+}
+FIN
+
+algo:algo7
+VARIABLES
+    n réel;
+DÉBUT
+{
+    Écrire "Donner moi une note ";
+    Lire n;
+    Si (n < 10)Alors{
+        Écrire "C'est nul";
+        Sinon si (n >= 10 && n <12) Alors{
+            Écrire "C'est passable'";
+            Sinon si (n >= 12 && n <14) Alors{
+                Écrire "C'est assez bien'";
+                Sinon si (n >= 14 && n <16) Alors{
+                    Écrire "C'est bien'";
+                    Sinon si (n >= 16 && n <18) Alors{
+                        Écrire "Felicitation'";
+                        Sinon
+                            Écrire "C'est majestueux";
+                    }FinSi
+                }FinSi
+            }FinSi
+        }FinSi
     }FinSi
 }
 FIN
