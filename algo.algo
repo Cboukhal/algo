@@ -130,3 +130,82 @@ DÉBUT
     }FinSi
 }
 FIN
+
+algo:algo8
+VARIABLES
+    civ chaine de caractére;
+    DÉBUT
+    {
+        // Votre algorithme ici ! 🤓
+        ecrire "Donner votre civilité";
+        lire civ;
+        sélectioner civ{
+            "mr": Écrire "Bonjour Monsieur";
+            "Mr": Écrire "Bonjour Monsieur";
+            "MR": Écrire "Bonjour Monsieur";
+            "MME": Écrire "Bonjour Madame";
+            "Mme": Écrire "Bonjour Madame";
+            "mme": Écrire "Bonjour Madame";
+            "MLLE": Écrire "Bonjour Mademoiselle";
+            "Mlle": Écrire "Bonjour Mademoiselle";
+            "mlle": Écrire "Bonjour Mademoiselle";
+            Sinon
+                Écrire "WTF"
+        }FINSELECTIONNER
+    }FIN
+
+algo:algo9
+VARIABLES
+    calcul caractére;
+    i,j réel;
+DÉBUT{
+    // Votre algorithme ici ! 🤓
+    Écrire "Sélection l'opération que vous voulez faire";
+    Lire calcul;
+    Si (calcul != "+") || (calcul != "-") || (calcul != "*") || (calcul != "/") || (calcul != "%")  || (calcul != "^")Alors{
+            Écrire "Reéssayer plus tard.";
+        Sinon
+            Écrire "Saisisser 2 valeurs";
+            lire i,j;
+            Si (calcul == "/") || (calcul == "%") && (i == 0) Alors{
+                Écrire "Reéssayer plus tard.";
+                Sinon
+                selectionner calcul{
+                    "+":Écrire "Le résultat de ",i ,calcul, j ,"est",(i+j);
+                    "-":Écrire "Le résultat de ",i ,calcul, j ,"est",(i-j);
+                    "/":Écrire "Le résultat de ",i ,calcul, j ,"est",(i/j);
+                    "*":Écrire "Le résultat de ",i ,calcul, j ,"est",(i*j);
+                    "^":Écrire "Le résultat de ",i ,calcul, j ,"est",(i^j);
+                    Sinon
+                        Écrire "Le résultat de ",i ,calcul, j ,"est",(i%j);
+                }FINSELECTIONNER
+            }FinSi
+    }FinSi
+}FIN
+
+VARIABLES
+    i réel;
+    j chaine de caractères;
+DÉBUT
+    // Votre algorithme ici ! 🤓
+    Écrire "saisser un montant HT";
+    Lire i;
+    Si (i < 0) Alors{
+       Écrire "Reéssayer plus tard.";
+        Sinon
+            // Instructions dans tous les autres cas.
+            Écrire "Quel base est votre TVA, normal, intermédiare ou réduit?"
+            Si (j != normal || j != intermédiare || j != réduit) Alors{
+                // Instructions si la condition "condition" est vérifiée.
+                Écrire "Reéssayer plus tard.";
+                Sinon
+                    // Instructions dans tous les autres cas.
+                    selectionner calcul{
+                    "normal":Écrire "Le montant HT est de ",i ,"le montant du TVA est de ",i*0.2,"le montant TTC est de ",i+i*0.2;
+                    "intermédiare":Écrire "Le montant HT est de ",i ,"le montant du TVA est de ",i*0.1,"le montant TTC est de ",i+i*0.1;
+                    Sinon
+                        Écrire "Le montant HT est de ",i ,"le montant du TVA est de ",i*0.05,"le montant TTC est de ",i+i*0.05;
+                }FINSELECTIONNER
+            }FinSi
+     } FinSi
+FIN

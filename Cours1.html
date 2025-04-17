@@ -29,8 +29,7 @@
         </section>
         <p>
             *Une instruction: c'est un ensemble d'élément exécutant une tache bien précise.
-            <br>Comme :
-            <ul>
+            <ul>Comme :
                 <li>les variables</li>
                 <li>les constantes</li>
                 <li>les opérateurs</li>
@@ -89,8 +88,7 @@
         La déclaration des variables se fait tout au début de l'algo, aprés la déclaration de l'algo même. Mais avant la 1er instruction concernant le traitement.
         <br>Pour déclarer une variable, on utilise le mot variable suivis du nom de la variableensuite de 2 points et du type de la variable.
         <br>Les var du même type peuvent être déclarer sur la même ligne
-        <br>Exemple:
-        <ul>
+        <ul class="Definition">exemple:
             <li>Variable prénom, nom: char</li>
             <li>age : int</li>
             <li>taille : float/double</li>
@@ -100,26 +98,17 @@
     <h3>Les types de variables</h3>
     <p>
         On attribut un type à une var selon son contenu.
-        <br>Exemple:
-        <ul>
+        <ul class="Definition">exemple:
             <li>Age => entier/int</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        <h4>1. Booléen/Bool</h4>
-            C'est de type de donnée qui correspond à 2 alternatives: vrai==0 ou faux==1
-        <h4>2. Entier/int</h4>
-            C'est de type de donnée qui correspond aux entiers naturels.
-        <h4>3.Réel/float/double</h4>
-            C'est de type de donnée qui correspond aux nbrs décimaux.
-        <h4>4.Chaine de caractéres/char</h4>
-            C'est de type de donnée qui correspond aux plusieurs caractéres.
+            <li><h4>1. Booléen/Bool</h4></li>
+            <li>C'est de type de donnée qui correspond à 2 alternatives: vrai==0 ou faux==1</li>
+            <li><h4>2. Entier/int</h4></li>
+            <li>C'est de type de donnée qui correspond aux entiers naturels.</li>
+            <li><h4>3.Réel/float/double</h4></li>
+            <li>C'est de type de donnée qui correspond aux nbrs décimaux.</li>
+            <li><h4>4.Chaine de caractéres/char</h4></li>
+            <li>C'est de type de donnée qui correspond aux plusieurs caractéres.</li>
+        </ul>    
     </p>
     <h3>Attention</h3>
     <p>
@@ -204,8 +193,8 @@
             Synthaxe: si(condition) alors{
                 <br>Instruction
             <br>}Fin
-            <br>Exemple :
-            <ul>Si (a > b) alors{
+            <ul class="Definition">exemple :
+                <li>Si (a > b) alors{</li>
                 <li>r&lt;-a/b</li>
                 <li>écrire r;</li>
                 <li>} Fin;</li>
@@ -236,7 +225,7 @@
                 <li>instruction3</li>
                 <li>}finsi</li>
             </ul>
-            <ul>Exemple:
+            <ul class="Definition">exemple:
                 <li>si(c == "Mr")alors{</li>
                 <li>Ecrire "Bonjour Mr";</li>
                 <li>sinon si(c == "Mme")alors{</li>
@@ -247,7 +236,25 @@
                 <li>}finsi</li>
             </ul>
         </p>
-        <h3>Selectionne (Selon que)</h3>
+        <h3>Selectionner (Selon que)</h3>
+        <p>
+            <ul>Synthaxe:
+                <li>Selon que variable{</li>
+                <li>instruction</li>
+                <li>...</li>
+                <li>autrement instruction</li>
+                <li>}Finselonque</li>
+            </ul>
+            <ul class="Definition">exemple:
+                <li>Selectionner civilite{</li>
+                <li>Mr:Ecrire ("Bonjour Mr");</li>
+                <li>Mme:Ecrire ("Bonjour Mme");</li>
+                <li>Mlle Ecrire ("Bonjour Mlle);</li>
+                <li>Sinon</li>
+                <li>Ecrire ("WTF")</li>
+                <li>}Finselonque</li>
+            </ul>
+        </p>
     </section>
 </body>
 
