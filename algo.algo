@@ -38,3 +38,68 @@ DÉBUT
     Écrire "la moyenne est de" ,(a+b+c+d+e)/5,"/20";
 }
 FIN
+
+algo:algo4;
+VARIABLES
+    a entier;
+DÉBUT
+{
+    Écrire "La réponse doit être le carré de 5, saisisser un chiffre";
+    Lire a;
+    Si (a == 25) Alors
+        Écrire "vous avez gagnez";
+    Sinon
+        Écrire "vous avez perdu";
+    FinSi
+}
+FIN
+
+algo:algo5;
+VARIABLES
+    a entier;
+DÉBUT
+{
+    Écrire "Donner moi votre age";
+    Lire a;
+    Si (a >= 18) Alors{
+        Écrire "vous êtes majeurs";
+    Sinon Si (a < 0)
+        Écrire "C'est impossible";
+    Sinon
+        Écrire "vous êtes mineurs";
+    }FinSi
+}
+FIN
+
+algo:algo6;
+VARIABLES
+    a entier;
+DÉBUT
+{
+    Écrire "Donner moi votre année de naissance";
+    Lire a;
+    a <- 2025 - a;
+    Si (a >= 18) Alors{
+        Écrire "vous êtes majeurs";
+    Sinon Si (a < 0)
+        Écrire "Vous venez du FUTURE !!!";
+    Sinon
+        Écrire "vous êtes mineur";
+    }FinSi
+}
+FIN
+
+algo:algo7;
+VARIABLES
+    a entier;
+DÉBUT
+{
+    Écrire "Donner moi une année ";
+    Lire a;
+    Si (((a%4 == 0) || (a%400 ==0)) && a%100 != 0)Alors{
+        Écrire "C'est une anné bissextile";
+    Sinon
+        Écrire "Ce n'est pas une anné bissextile";
+    }FinSi
+}
+FIN
