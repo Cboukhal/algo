@@ -209,3 +209,50 @@ DÉBUT
             }FinSi
      } FinSi
 FIN
+
+Variable longueur, largeur, aire : nombre
+Variable continuer : chaine
+Début
+continuer ← "oui"
+TantQue continuer = “oui”
+Écrire "Quelle est la longueur du rectangle ?"
+Lire longueur
+Écrire "Quelle est la largeur du rectangle ?"
+Lire largeur
+aire ← longueur * largeur
+Écrire "L'aire du rectangle vaut ", chaine(aire)," m2."
+Écrire "Voulez-vous effectuer un nouveau calcul ? (oui/non)"
+Lire continuer
+FinTantQue
+Fin
+
+variable
+n,a : entier;
+Début
+{
+    n ← 1;
+    pour compteur De 1 À 10 faire {
+        a ← n*n;
+        Écrire "L'aire d'un carré de côté ",n " est de ",a;
+        n ← n + 1;
+    }Finpour
+}Fin
+
+variable
+longueur, largeur, aire : entier;
+continuer : chaine de caractére;
+début
+{
+    continuer ← oui;
+    TantQue continuer == "oui" Faire{
+		Écrire "Quelle est la longueur du rectangle ?";
+        Lire longueur;
+        Écrire "Quelle est la largeur du rectangle ?";
+        Lire largeur;
+        aire ← lingueur * largeur;
+        Ecrire "L'aire du rectangle vaut", aire, "m²";
+        Ecrire "Voulez-vous effectuer un nouvel calcul ?"
+        Lire continuer;
+	}FinTantQue
+}
+fin
