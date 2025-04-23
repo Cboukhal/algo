@@ -231,7 +231,7 @@ n,a : entier;
 Début
 {
     n ← 1;
-    pour compteur De 1 À 10 faire {
+    pour n De 1 jusqu'à 10 faire { //// initialisation se fait ici donc pas besoin de n ← 1; ////
         a ← n*n;
         Écrire "L'aire d'un carré de côté ",n " est de ",a;
         n ← n + 1;
@@ -256,3 +256,26 @@ début
 	}FinTantQue
 }
 fin
+
+VARIABLES
+    n,i : entier;
+DÉBUT
+    // Votre algorithme ici ! 🤓
+    {
+        n = 2;
+        i = 2;
+        TantQue n <= 100 faire{
+            TantQue (n % i != 0){
+                i ← i + 1;
+            }
+            FinTantQue
+        si i == n Alors{
+            Écrire n,"est un nombre premier";
+        }
+        FinSi
+        i ← 2;
+        n ← n + 1;
+        }
+        FinTantQue
+    }
+FIN
