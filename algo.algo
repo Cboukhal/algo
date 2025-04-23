@@ -302,3 +302,21 @@ SINON
 }FINSI
 
 }FIN
+
+VARIABLES
+    n,i,j : entier;
+DÉBUT{
+    // Votre algorithme ici ! 🤓
+    ÉCRIRE "saisi un nombre entre 0 et 9";
+    TANTQUE (n < 0 || n > 9) FAIRE{
+        ÉCRIRE "saisi un nombre entre 0 et 9";
+        LIRE n;
+    }FINTANTQUE
+    SI (n > 0) ALORS{
+        POUR i de 1 JUSQU'À n pas de 1 FAIRE{
+            POUR j de 1 JUSQU'À i pas de 1 FAIRE{
+                ÉCRIRE i
+            }FINPOUR             
+        }FINPOUR   
+    }FINSI
+}FIN
