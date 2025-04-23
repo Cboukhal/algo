@@ -189,8 +189,10 @@
             Les conditions nous permettent de tester si une instruction est vérifiée ou non. C'est à dire si elle renvoie vrai ou faux.
         </p>
         <h3>La condition simple: si</h3>
+        <aside class="exemple">
         <p>
-            Synthaxe: si(condition) alors{
+            Synthaxe: 
+        <br>si(condition) alors{
                 <br>Instruction
             <br>}Fin
             <ul class="Definition">exemple :
@@ -200,6 +202,7 @@
                 <li>} Fin;</li>
             </ul>  
         </p>
+        </aside>
         <h3>Les conditions alternative (si,sinon)</h3>
         <p>
             Synthaxe:
@@ -214,8 +217,8 @@
         <h3>Les conditions multiples</h3>
         <p>
             C'est le fait d'inbriquer des conditions alternatives simples autant de fois que nécessaire.
-            <br>Synthaxe:
-            <ul>
+            <aside class="exemple">
+            <ul>Synthaxe:
                 <li>si(condition)alors{</li>
                 <li>instruction1</li>
                 <li>sinon si(condition2)alors{</li>
@@ -235,8 +238,10 @@
                 <li>}finsi</li>
                 <li>}finsi</li>
             </ul>
+            </aside>
         </p>
         <h3>Selectionner (Selon que)</h3>
+        <aside class="exemple">
         <p>
             <ul>Synthaxe:
                 <li>Selon que variable{</li>
@@ -255,6 +260,7 @@
                 <li>}Finselonque</li>
             </ul>
         </p>
+        </aside>
     </section>
     <section class="partie">
         <h2>Les boucles</h2>
@@ -265,12 +271,12 @@
         <p>
             La boucle tant que test une condition et si la condition est vérifié elle éxécute les instructions, sinon elle ne fera rien.
         </p>
+        <aside class="exemple">
         <ul>Synthaxe :
             <li>Tant que (condition) faire{</li>
             <li>instruction</li>
             <li>}Fintantque</li>
         </ul>
-        <aside class="exemple">
             <ul class="Definition">exemple :
                 <li>n ← 0</li>
                 <li>Tant que n &lt;=10 faire{</li>
@@ -292,14 +298,36 @@
                 <li>10</li>
             </ul>
         </aside>
-        <h3></h3>
+        <h3>Répéter jusqu'à (Do while)</h3>
         <p>
-
+            Elle éxecute d'abors les instructions et teste la condition par la suite, si la condition est vérifiée, elle éxecute les instructions à nouveau tant que la condition reste vraie. En définitive, la boucle répéter va éxecuter au moins une fois les instructions.
         </p>
+        <aside class="exemple">
+        <ul>Synthaxe :
+            <li>Répéter {</li>
+            <li>instruction</li>
+            <li>}Jusqu'à(condition)</li>
+        </ul>
+            <ul class="Definition">exemple :
+                <li>n ← 0</li>
+                <li>Répéter{</li>
+                <li>Ecrire ("j'adore les algos");</li>
+                <li>n ← n + 1;</li>
+                <li>} jusqu'à n == 5;</li>
+            </ul>  
+            <ul class="résultat">résultat :
+                <li>"j'adore les algos"</li>
+                <li>"j'adore les algos"</li>
+                <li>"j'adore les algos"</li>
+                <li>"j'adore les algos"</li>
+                <li>"j'adore les algos"</li>
+            </ul>
+        </aside>
         <h3>Pour (for)</h3>
         <p>
 
         </p>
+        
     </section>
 
 </body>

@@ -279,3 +279,26 @@ DÉBUT
         FinTantQue
     }
 FIN
+
+VARIABLES
+    n,i : entier;
+DÉBUT{
+    // Votre algorithme ici ! 🤓
+    i = aléatoire(100);
+Écrire "Choisisez un nombre entre 0 et 100";
+SI n == i ALORS{
+    ÉCRIRE "Bravo vous avez gagné";
+SINON
+    RÉPÉTER{
+        SI n<i ALORS{
+            ÉCRIRE "trop petit";
+        SINON
+            ÉCRIRE "trop grand";
+        }FINSI
+        écrire  "recommencer";
+        lire n;
+    }JUSQU'À n = i;
+ÉCRIRE "Bravo vous avez gagné";  
+}FINSI
+
+}FIN
