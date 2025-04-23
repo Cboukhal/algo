@@ -231,7 +231,7 @@ n,a : entier;
 Début
 {
     n ← 1;
-    pour n De 1 jusqu'à 10 faire { //// initialisation se fait ici donc pas besoin de n ← 1; ////
+    pour n De 1 jusqu à 10 faire { //// initialisation se fait ici donc pas besoin de n ← 1; ////
         a ← n*n;
         Écrire "L'aire d'un carré de côté ",n " est de ",a;
         n ← n + 1;
@@ -297,7 +297,7 @@ SINON
         }FINSI
         écrire  "recommencer";
         lire n;
-    }JUSQU'À n = i;
+    }JUSQU À n = i;
 ÉCRIRE "Bravo vous avez gagné";  
 }FINSI
 
@@ -313,8 +313,8 @@ DÉBUT{
         LIRE n;
     }FINTANTQUE
     SI (n > 0) ALORS{
-        POUR i de 1 JUSQU'À n pas de 1 FAIRE{
-            POUR j de 1 JUSQU'À i pas de 1 FAIRE{
+        POUR i de 1 JUSQU À n pas de 1 FAIRE{
+            POUR j de 1 JUSQU À i pas de 1 FAIRE{
                 ÉCRIRE i
             }FINPOUR             
         }FINPOUR   
