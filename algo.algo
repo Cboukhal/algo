@@ -320,3 +320,25 @@ DÉBUT{
         }FINPOUR   
     }FINSI
 }FIN
+
+VARIABLES
+    i,age : entier;
+    nom, prenom, continuer : chaine de caractére;
+Début{
+    continuer ← "oui";
+    tant que continuer == "oui" alors{
+        Ecrire "quel est votre nom ?";
+        lire nom;
+        Ecrire "quel est votre prenom ?";
+        lire prenom;
+        Ecrire "quel est votre âge ?";
+        lire age;
+        tableau_presentation ← [nom, prenom, age];
+        pour i allant de 0 à longueur (tableau_presentation) pas de 1 faire{
+            Ecrire presentation[i];
+            i ← i + 1;
+        }Finpour
+        écrire "voulez-vous continuer ?"
+        lire continuer;
+    }FinTantQue
+}Fin

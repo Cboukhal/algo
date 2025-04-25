@@ -142,10 +142,15 @@
         <br>exemple : Pi ← 3,14;
                         <br>Pi Réel ← 3,14;
     </p>
+    </section>
+
+    <section class="partie">
     <h2>Les opérateurs</h2>
-    <p>
-        Les opérateurs sont les éléments qui nous permettent d'assoccier, de comparer, de calculer...les valeurs ou autre éléments.
-    </p>
+    <span class="p">
+        <p>
+            Les opérateurs sont les éléments qui nous permettent d'assoccier, de comparer, de calculer...les valeurs ou autre éléments.
+        </p>
+    </span>
     <h3>Opérateurs arithmétique</h3>
     <p>
         <ul>
@@ -185,9 +190,11 @@
 
     <section class="partie">
         <h2>Les conditions</h2>
+        <span class="p">
         <p>
             Les conditions nous permettent de tester si une instruction est vérifiée ou non. C'est à dire si elle renvoie vrai ou faux.
         </p>
+        </span>
         <h3>La condition simple: si</h3>
         <aside class="exemple">
         <p>
@@ -264,9 +271,11 @@
     </section>
     <section class="partie">
         <h2>Les boucles</h2>
+        <span class="p">
         <p>
             Une boucle sert à répéter une instruction ou un bloc d'instruction autant de fois que nécessaire selon la || les condition(s) définis par le programmeur.
         </p>
+        </span>
         <h3>Tant que (while)</h3>
         <p>
             La boucle tant que test une condition et si la condition est vérifié elle éxécute les instructions, sinon elle ne fera rien.
@@ -380,7 +389,89 @@
                 <li>L'aire d'un carré de côté 10 est de 100</li>
             </ul>
         </aside>
+        </section>
     </section>
+
+    <section class="partie">
+        <h2>Tableau</h2>
+        <span class="p">
+        <p>
+            Un tableau est un conteneur pouvant stocker plusieurs valeurs.
+        </p>
+        </span>
+        <section class="Definition">
+            <h3>Definition</h3>
+            <p>
+                Supposons qu'on est besoin de 20 valeurs simultanéments. Il faudrait dans se cas créer 20 variables pour stocker ces valeurs. Volià pourquoi les tableaux sont importants dans la programmation. Parce qu'ils permettent de stocker plusieurs valeurs dans un et un seul tableau.
+                <br>Un tableau peut contenir un ou plusieurs autres tableaux.
+                <br>On accéde aux valeurs de notre tableau, grace à des indices qui vont de 0 à la longueur du tableau. Un tel tableau est appelé tableau indéxé. On peut aussi accéder aux valeurs d'un tableau grâce à leurs noms, dans se cas on appelle ce tableau associatif ou nominatif.
+            </p>
+        </section>
+        <h3>Déclaration d'un Tableau</h3>
+        <p>
+            Les tableaux tout comme les variables et les constantes se déclarent avant l'étape de traitement. On peut déclarer un tableau en précisant sa longueur à l'avance mais l'attribution de la taille du tableau et dynamique par défaut. C'est à dire quelle est automatiquement gérer par le systéme.
+        </p>
+        <aside class="exemple">
+                <ol class="Definition">exemple :
+                    <li>Tableau nom_du_tableau(longueur du tableau): Type du tableau(facultatif)</li>
+                    <li>Tableau nom_du_tableau (dynamique)</li>
+                </ol>  
+            </aside>
+            <h3>Affectation</h3>
+            <p>
+                A la différence des variables et des constantes, l'affectation de valeur à un tableau se fait de maniére différente.
+                <br>Car toute les valeurs vont être encadrés par des crochets[].
+            </p>
+            <aside class="exemple">
+                    <ol class="Definition">exemple :
+                        <li>nom_du_tableau ← [valeur1,valeur2,valeur3,...]</li>
+                        <li>nom_du_tableau = [valeur1,valeur2,valeur3,...]</li>
+                    </ol>  
+                </aside>
+            <h3>Parcourir un tableau</h3>
+            <p>
+                Pour parcourirun tableau, on utilise une boucle pour accéder à l'ensemble des valeurs du tableau. On accéde à une valeur précise du tableau grâce au nom du tableau entre crochet l'indice de la valeur correspondante.
+                <br>Dans tout language de programmation il existe des fonctions prédifinis pour déterminer ou renvoyer la longueur d'un tableau. Au cas où celui-ci serait déclarer dynamiquement.
+                <br>Dans se cas si on connait notre indice de départ qui est généralement 0 et notre indice finale qui sera donné par la longueur du tableau, il est plus approprié d'utiliser la boucle pour(for), pour parcourir le tableau.
+            </p>
+            <aside class="exemple">
+                <ul class="Definition">exemple :
+                    <li>pour i de 0 jusqu'à longueurtab pas de 1 Faire{</li>
+                    <li>Ecrire tab[i]</li>
+                    <li>}Finpour</li>
+                </ul>  
+            </aside>
+            <h3>Modifier un Tableau</h3>
+            <p>
+                On peut modifier un tableau en y ajoutant des valeurs ou en supprimant, ou tout simplement modifier les valeurs déjà présente dans le tableau. 
+            </p>
+            <h4>Ajouter une valeur au tableau :</h4>
+            <p>
+                Dans un tableau indexé on ajoute la valeur à la fin du tableau. Sinon on risque d'écraser les valeurs déjà présente.
+            </p>
+            <aside class="exemple">
+                    <ul class="Definition">exemple :
+                        <li>taille ← longueur(tab)</li>
+                        <li>tab[taille + 1] ← nouvelle_valeur;</li>
+                        <li></li>
+                </aside>
+            <h4>Supprimer une valeur d'un tableau</h4>
+            <p>
+                Dans la plus part des languages de programmation il existe des fonctions prédéfinis qui permettent de supprimer une valeur d'un tableau.
+                <br>Cependant en algorithmie nous allons utiliser le vide pour remplacer la valeur existante.
+            </p>
+            <aside class="exemple">
+                <ul class="Definition">exemple :
+                    <li>tab[7] = ""</li>
+            </aside>
+            <h4>Modifier une valeur</h4>
+            <p>
+                Pour modifier une valeur, on passe par son indice dans le tableau comme pour la suppression.
+            </p>
+            <aside class="exemple">
+                <ul class="Definition">exemple :
+                    <li>tab[7] ← nouvelle valeur</li>
+            </aside>
     </section>
 
 </body>
