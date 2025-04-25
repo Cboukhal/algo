@@ -474,6 +474,86 @@
             </aside>
     </section>
 
+    <section class="partie">
+        <h2>Tabbleau multidimensionnel</h2>
+        <section class="Definition">
+            <h3>Definition</h3>
+            <p>
+                Un tableau est un conteneur qui peut contenir plusieurs valeurs, donc un tableau multidimensionnel n'est rien d'autre qu'un tableau de tableaux.
+            </p>
+        </section>
+        <h3>Déclaration</h3>
+        <p>
+            Le tableau multidimensionnel étant aussi un tableau, il se déclare aussi comme tout autre tableau.
+        </p>
+        <aside class="exemple">
+                <ul class="Definition">exemple :
+                    <li>tableau nom_du_tableau (longueur facultatif) : (type falcutatif)</li>
+                </ul>  
+        </aside>
+        <h3>Affectation</h3>
+        <p>
+            Comme pour les tableaux simples, l'affectation d'un tableau multidimensionnel se fait grâce ou à l'aide des crochets qui contiennent les valeurs.
+            <br>Un tableau multidimensionnel étant un tableau de tableau donc on aura davantage de crochet.
+        </p>
+        <aside class="exemple">
+            <ul class="Definition">exemple :
+                <li>tab ← [[prénom,nom,age], [prenom,nom,age], [prenom,nom,age]]</li>
+                <li>tab3 ← [[[prénom,nom,age], [prénom,nom,age]], [[prénom,nom,age],[prénom,nom,age]]]</li>
+            </ul>  
+        </aside>
+        <h3>Parcourir un tableau</h3>
+        <p>
+            tab ← [[8, 6, 2],[1, 3, 7],[6, 5, 2]]
+            <br>Pour parcourir les tableaux, on aura besoin d'autant de boucle que de dimentions.
+            <br>On a besoin d'une boucle pour parcourir est affiché les éléments d'un tableau simple.
+            <br>Il est donc évident qu'on est besoin d'autant de boucles que de dimensions.
+            <br>C'est à dire que j'aurai besoin de 2 boucles pour un tableau à 2 dimensions...
+        </p>
+        <aside class="exemple">
+            <ul class="Definition">exemple :
+                <li>Pour i de 0 jusqu'à longueur(tab) faire{</li>
+                <li>Pour j de 0 jusqu'à longueur(tab(i)) faire{</li>
+                <li>Ecrire tab[i][j];</li>
+                <li>}finpour</li>
+                <li>}finpour</li>
+            </ul>  
+        </aside>
+        <h3>Modifier un TM</h3>
+        <p>
+            Tout comme un tableau simple, un TM peut être modifier en y ajoutant des valeurs, en y supprimant ou en les modifiants. 
+        </p>
+        <h4>Ajouter des valeurs à un TM :</h4>
+        <p>
+            On ajoute une nouvelle valeur à la fin de notre tableau.
+        </p>
+        <aside class="exemple">
+            <ul class="Definition">exemple :
+                <li>newtabs ← ["coucou","salut","bien"];</li>
+                <li>long ← longueur(tab);</li>
+                <li>tab[long+1] ← newtabs;</li>
+            </ul>  
+        </aside>
+        <h4>Suppression de valeur d'un TM</h4>
+        <p>
+            Bien que présente dans la programmation, en algorithmie, il n'existe pas de fonction prédéfinie pour la suppression du coup on remplace les valeurs par du vide.
+        </p>
+        <aside class="exemple">
+            <ul class="Definition">exemple :
+                <li>newtabs ← ["","",""];</li>
+            </ul>  
+        </aside>
+        <h4>Modifier les valeurs d'un TM</h4>
+        <p>
+            Tout comme le tableau simple, on peut modifier les valeurs d'un TM en posant par ses indices.
+        </p>
+        <aside class="exemple">
+            <ul class="Definition">exemple :
+                <li>tab[1][2] ← newsval</li>
+            </ul>  
+        </aside>
+    </section>
+
 </body>
 
 <footer>
