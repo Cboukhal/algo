@@ -554,6 +554,72 @@
         </aside>
     </section>
 
+    <section class="partie">
+        <h2>Les fonctions</h2>
+        <section class="Definition">
+            <h3>Definition</h3>
+            <p>
+                Une fonction est un sous algorithme, c'est à dire peut contenir l'ensemble des éléments qu'on trouve dans algorithme. Elle porte un nom et posséde des paramétres(moyen de communication) et peut être appelé dans l'algorithme autant de fois que nécessaire.
+                <br>Les variables, les tableaux ainsi que les constantes à l'intérieur d'une fonction deviennent des léléments locaux, c'est à dire qu'ils ne sont accéssible que dans la fonction.
+                <br>La fonction est comme un raccourci qui permet d'éviter les longues répétition de lignes d'instructions. Elle a pour objectif de faciliter la lecture de l'algorithme et d'éviter la répétition. Il existe des fonction prédéfini, c'est à dire généré automatiquement par la langue ou le programme utilisé. Ou encoore par l'utilisateur.
+            </p>
+        </section>
+
+        <h3>Déclaration des fonctions</h3>
+        <p>
+            On déclare une fonction avec l'instruction fonction suivi du nom de la fonction et des parenthéses. A l'intérieur des parenthéses, on mettra si besoin les paramétres de la fonction. Si la fonction retourne un type bien défini on pourra rajouter dans se cas le type de la fonction précédé de 2points après les parenthéses.
+        </p>
+        <aside class="exemple">
+            <ul>1. Synthaxe :
+                <li>fonction nom_de_la_fonction()</li>
+                <li>Début{</li>
+                <li>instruction</li>
+                <li>}Fin</li>
+            </ul>    
+            <ul class="Definition">exemple :
+                <li>fonction bonjour()</li>
+                <li>Début{</li>
+                <li>Ecrire ("Bonjour, bonne journée");</li>
+                <li>}Fin</li>
+            </ul>
+              
+            <ul class="résultat">résultat :
+                    <li>Bonjour, bonne journée</li>
+            </ul>          
+            </aside>
+            <section class="border">
+                <aside class="exemple">
+                    <ul>2. Synthaxe :
+                        <li>fonction nom_de_la_fonction(val a : entier, ref b:chaine de caractère):Entier</li>
+                        <li>Début{</li>
+                        <li>instruction</li>
+                        <li>retourne a;</li>
+                        <li>}Fin</li>
+                    </ul>
+                    <ul class="Definition">exemple :
+                        <li>fonction addition(a,b):Entier</li>
+                        <li>Début{</li>
+                        <li>return a + b;</li>
+                        <li>}Fin</li>
+                    </ul>
+                    <ul class="résultat">résultat :
+                        <li>a + b</li>
+                </ul>
+                </aside>
+            </section>
+        <h3>Utilisation (appel à la fonction) :</h3>
+        <p>
+            On utilise les fonctions à l'intérieur de l'algorithme. On fait appel à la fonction par son nom suivi des parenthéses.
+            <br>Si la fonction n'est pas vite et qu'elle retourne une valeur, il faudra stocker cette valeur afin de pouvoir l'afficher ou travailler avec.
+        </p>
+        <aside class="exemple">
+            <ul class="Definition">exemple :
+                <li>bonjour();</li>
+                <li>c ← addition(5,3);</li>
+            </ul>  
+        </aside>
+    </section>
+
 </body>
 
 <footer>
