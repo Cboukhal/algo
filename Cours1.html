@@ -560,7 +560,7 @@
             <h3>Definition</h3>
             <p>
                 Une fonction est un sous algorithme, c'est à dire peut contenir l'ensemble des éléments qu'on trouve dans algorithme. Elle porte un nom et posséde des paramétres(moyen de communication) et peut être appelé dans l'algorithme autant de fois que nécessaire.
-                <br>Les variables, les tableaux ainsi que les constantes à l'intérieur d'une fonction deviennent des léléments locaux, c'est à dire qu'ils ne sont accéssible que dans la fonction.
+                <br>Les variables, les tableaux ainsi que les constantes à l'intérieur d'une fonction deviennent des éléments locaux, c'est à dire qu'ils ne sont accéssible que dans la fonction.
                 <br>La fonction est comme un raccourci qui permet d'éviter les longues répétition de lignes d'instructions. Elle a pour objectif de faciliter la lecture de l'algorithme et d'éviter la répétition. Il existe des fonction prédéfini, c'est à dire généré automatiquement par la langue ou le programme utilisé. Ou encoore par l'utilisateur.
             </p>
         </section>
@@ -617,6 +617,36 @@
                 <li>bonjour();</li>
                 <li>c ← addition(5,3);</li>
             </ul>  
+        </aside>
+        <h3>Fonctions récursives</h3>
+        <p>Une fonction récursive est une fonction qui fait appel à elle même et à employer avec beaucoup de précaution. Car elle risque de boucler à l'infini et bloquer le systéme.</p>
+        <aside class="exemple">
+            <ul class="Definition">exemple :
+                <li>fonction bonjour()</li>
+                <li>Début{</li>
+                <li>Ecrire "Bonjour";</li>
+                <li>bonjour();</li>
+                <li>}Fin</li>
+            </ul>
+            <ul class="Definition">exemple :
+                <li>fonction pgcd(a:entier,b:entier):Entier</li>
+                <li>Début{</li>
+                <li>si b = 0 alors{</li>
+                <li>retourne a;</li>
+                <li>}Finsi</li>
+                <li>retourne pgcd(b,a%b);</li>
+                <li>}Fin</li>
+            </ul>  
+        </aside>
+        <h3>Fonctions prédéfinis</h3>
+        <p>
+            Tous les languages de programmation fournissent des fonctions prédéfinis pour aider le programme a gagner du tempset minimiser ses lignes de codes.
+            <br>Une fonction prédéfinie est donc une fonction fournie par le systéme qu'on peut utiliser autant de fois que nécessaire.
+        </p>
+        <aside class="exemple">
+        <ul class="Definition">exemple :
+            <li>position("@","bff@hotmail.fr")</li>
+        </ul>
         </aside>
     </section>
 
