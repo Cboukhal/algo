@@ -342,3 +342,50 @@ Début{
         lire continuer;
     }FinTantQue
 }Fin
+
+\\\\\\https://www.coodemaroc.com/2021/05/algorithme_28.html////////
+
+Exercice 53
+fonction pair(n:entier)
+début
+{
+si (n % 2 == 0) alors
+		Ecrire n, "est pair";
+	sinon
+		Ecrire n, "est impair";
+	finsi
+}
+fin
+
+algo principal 
+VARIABLES
+    n : entier;
+début{
+    Ecrire "Donner moi un entier.";
+    lire n;
+    pair(n);
+}fin
+
+Exercice 54
+fonction nbc(c : chaine de caractères) : entier
+VARIABLES
+    n : entier;
+début {
+    n ← 0;
+    tant que (c[n] != '\0') faire{
+        n ← n + 1;
+    }fintantque	
+	renvoyer n;
+}fin
+
+Fonction somme ( n: entier, x:entier): entier 
+Début
+
+   Si (n==0 && x==0 ) alors
+            retourner  0;
+       Sinon si (n==0 && x!=0 ) alors
+            retourne x;
+	sinon
+            retourner somme (n-1),(n+x);
+    FinSi
+Fin
