@@ -1,4 +1,9 @@
-if (niv < 10%)
+#include <stdio.h>
+
+int main()
 {
-    printf("Cuve vide")
+    int i;
+
+    i = 0;
+    printf(i);
 }
