@@ -69,40 +69,40 @@ algo principal
 VARIABLES
     saison,oui : chaine de caractères;
 DÉBUT{
-ecrire "qu'elle mois sommes-nous en France?";
+ecrire "quel mois sommes-nous en France?";
 lire saison;
 \\suivant les années, les 20 ou 21 mars (printemps), 20 ou 21 juin (été), 22 ou 23 septembre (automne) et 21 ou 22 décembre (hiver).
 SÉLECTIONNER saison{
      "Janvier" : ecrire "Nous sommes dans l'hiver";
      "Février" : ecrire "Nous sommes dans l'hiver";
-      "Mars":   ecrire "Sommes nous aprés le 19 Mars ?";
+         "Mars": ecrire "Sommes nous aprés le 19 Mars ?";
                 lire oui;
                 SI oui == "oui" ALORS{
                     ecrire "Nous sommes en printemps";
                 SINON
                    ecrire "Nous sommes en plein hiver";
                 }FINSI                
-      "Avril"  ecrire "Nous sommes dans le printemps";
-       "Mai":  ecrire "Nous sommes dans le printemps";
-       "Juin": ecrire "Sommes nous aprés le 19 Juin ?";
+        "Avril": ecrire "Nous sommes dans le printemps";
+          "Mai": ecrire "Nous sommes dans le printemps";
+         "Juin": ecrire "Sommes nous aprés le 19 Juin ?";
                 lire oui;
                 SI oui == "oui" ALORS{
                     ecrire "Nous sommes en été";
                 SINON
                    ecrire "Nous sommes en printemps";
                 }FINSI
-    "Juillet":  ecrire "Nous sommes dans l'été";
-    "Août":    ecrire "Nous sommes dans l'été";
-    "Septembre" : ecrire "Sommes nous aprés le 21 Septembre ?";
+      "Juillet": ecrire "Nous sommes dans l'été";
+         "Août": ecrire "Nous sommes dans l'été";
+    "Septembre": ecrire "Sommes nous aprés le 21 Septembre ?";
                 lire oui;
                 SI oui == "oui" ALORS{
                     ecrire "Nous sommes en automne";
                 SINON
                    ecrire "Nous sommes en été";
                 }FINSI
-    "Octobre":ecrire "Nous sommes dans l'automne";
-    "Novembre":  ecrire "Nous sommes dans l'automne";
-    "Décembre" : ecrire "Sommes nous aprés le 20 Décembre ?";
+       "Octobre": ecrire "Nous sommes dans l'automne";
+      "Novembre": ecrire "Nous sommes dans l'automne";
+      "Décembre": ecrire "Sommes nous aprés le 20 Décembre ?";
                 lire oui;
                 SI oui == "oui" ALORS{
                     ecrire "Nous sommes en hiver"
@@ -120,6 +120,7 @@ algo principal
 VARIABLES
     tmax,tmin,pmin,pmax,i : entier;
     stop : chaine de caractères;
+    tab : tableau d entiers;
 DÉBUT{
 tmax ← 0;
 tmin ← 0;
@@ -132,7 +133,7 @@ TANTQUE stop != "oui" FAIRE{
     ecrire "Mettez un entier dans votre tableau";
     lire  tab[i];
     i ← i + 1;
-    ecrire "voulez vous arrétez ?";
+    ecrire "voulez vous arrétez ? (oui ou non)";
     lire stop;
 }FINTANTQUE
 \\pour afficher le tableau
@@ -140,8 +141,8 @@ TANTQUE stop != "oui" FAIRE{
 \\pour variable_indice <- valeur_de_debut à valeur_de_fin pas valeur_pas faire
 		code_ici
 \\initialiser les valeurs
-tmax ← tab[1];
-tmin ← tab[1];
+tmax ← tab[0];
+tmin ← tab[0];
 POUR i de 0 JUSQU À longueur(tab) - 1 FAIRE{
     SI tmax < tab[i] ALORS{
     tmax ← tab[i];
@@ -158,6 +159,7 @@ tab[pmax]← tmin;
 \\pour afficher les changements
 écrire tab;
 }FIN
+
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 algo5
 algo principal 
@@ -180,6 +182,7 @@ lire annee2;
 \\compter les jours en plus pour les années bissextiles qui sont tous les 4 ans 
 annee ← annee2 - annee1;
 j ← annee//4;
+\\nbj1 = nombre de jour
 nbj1 ← j1 + mois1*30 + annee1*365;
 nbj2 ← j2 + mois2*30 + annee2*365;
 nbj← nbj2-nbj1;
@@ -190,6 +193,7 @@ SI nbj<0 ALORS{
 nbj ← nbj + j;
 ecrire "Il y a ", nbj, " jours entre les deux dates (approximatif).";
 FIN
+
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 fonction affiche_employes(tab : tableau de chaine)
@@ -201,25 +205,25 @@ Début{
 
 fonction ajouter_employes(tab : tableau de chaine) : tableau de chaine
 début{
-    i ← longueur(tab) - 1;
+    i ← longueur(tab);
     ecrire "Saisisser un prénom.";
     lire prenom;
-    tab[i][1]←prenom;
+    tab[i][0]←prenom;
     ecrire "Saisisser un nom.";
     lire nom;
-    tab[i][2]←nom;
+    tab[i][1]←nom;
     ecrire "Saisisser une adresse.";
     lire adresse;
-    tab[i][3]←adresse;
+    tab[i][2]←adresse;
     ecrire "Saisisser un telephone.";
     lire telephone;
-    tab[i][4]←telephone;
+    tab[i][3]←telephone;
     ecrire "Saisisser une année embauche.";
     lire année;
-    tab[i][5]←année;
+    tab[i][4]←année;
     ecrire "Saisisser un salaire.";
     lire salaire;
-    tab[i][6]←salaire;
+    tab[i][5]←salaire;
     retourne (tab);
 }fin
 
@@ -228,14 +232,14 @@ début{
 ecrire "Quel employé voulez vous changer le salaire, saisisser le numéro de telephone.";
 lire telephone;
 salaire ← 0;
-POUR i = 0 JUSQU À longueur(tab)-1 FAIRE{
-    SI tab[i][4] = telephone ALORS{
+POUR i de 0 JUSQU À longueur(tab)-1 FAIRE{
+    SI tab[i][3] == telephone ALORS{
        ecrire "quelle sera son nouveau salaire ?";
        lire salaire;
-       tab[i][6] ← salaire;
+       tab[i][5] ← salaire;
     }finsi
 }FINPOUR
-SI i == longueur(tab) - 1 && salaire == 0  ALORS{
+SI salaire == 0  ALORS{
     ecrire "je ne l'ai pas trouvé";
 }FINSI
 retourne (tab);
@@ -249,9 +253,9 @@ début
         lire annee;
     employe ← 0;
     POUR i de 1 JUSQU À longueur(tab) FAIRE{
-        SI tab[i][5] == annee ALORS{
-            ecrire tab[i][2] ,tab[i][1] ," a été employé en ",annee;
-            employe == employe + 1 ;
+        SI tab[i][4] == annee ALORS{
+            ecrire tab[i][1] ,tab[i][0] ," a été employé en ",annee;
+            employe ← employe + 1 ;
         }FINSI        
     }FINPOUR
     SI employe == 0 ALORS{
@@ -265,27 +269,27 @@ début
 	{
        ecrire "Combien d'employés voulez vous ajouter ?";
 lire n;
-i ← longueur(tab) - 1;
+i ← longueur(tab);
 n ← n + i - 1
-POUR i de longueur(tab) - 1 JUSQU À n FAIRE{
+POUR i de longueur(tab) JUSQU À n FAIRE{
     ecrire "Saisisser un prénom.";
     lire prenom;
-    tab[i][1]←prenom;
+    tab[i][0]←prenom;
     ecrire "Saisisser un nom.";
     lire nom;
-    tab[i][2]←nom;
+    tab[i][1]←nom;
     ecrire "Saisisser une adresse.";
     lire adresse;
-    tab[i][3]←adresse;
+    tab[i][2]←adresse;
     ecrire "Saisisser un telephone.";
     lire telephone;
-    tab[i][4]←telephone;
+    tab[i][3]←telephone;
     ecrire "Saisisser une année embauche.";
     lire année;
-    tab[i][5]←année;
+    tab[i][4]←année;
     ecrire "Saisisser un salaire.";
     lire salaire;
-    tab[i][6]←salaire;
+    tab[i][5]←salaire;
 }FINPOUR
 retourne (tab);
     }
@@ -302,36 +306,36 @@ i ← 0;
 ecrire "Bonjour entrer le nombre d'employé";
 lire n;
 POUR i de 0 JUSQU À n - 1 FAIRE {
-    POUR j = 1 JUSQU À 6 FAIRE{
-        SI j = 1 ALORS{
+    POUR j de 0 JUSQU À 6 FAIRE{
+        SI j == 0 ALORS{
         ecrire "Saisisser un prénom.";
         lire prenom;
-        tab[i][j]=prenom;
+        tab[i][j]←prenom;
         }FINSI
-        SI j = 2 ALORS{
+        SI j == 1 ALORS{
         ecrire "Saisisser un nom.";
         lire nom;
-        tab[i][j]=nom;
+        tab[i][j]←nom;
         }FINSI
-        SI j = 3 ALORS{
+        SI j == 2 ALORS{
         ecrire "Saisisser une adresse.";
         lire adresse;
-        tab[i][j]=adresse;
+        tab[i][j]←adresse;
         }FINSI
-        SI j = 4 ALORS{
+        SI j == 3 ALORS{
         ecrire "Saisisser un telephone.";
         lire telephone;
-        tab[i][j]=telephone;
+        tab[i][j]←telephone;
         }FINSI
-        SI j = 5 ALORS{
-        ecrire "Saisisser une année embauche."
+        SI j == 4 ALORS{
+        ecrire "Saisisser une année embauche.";
         lire annee;
-        tab[i][j]=annee;
+        tab[i][j]←annee;
         }FINSI
-        SI j = 6 ALORS{
+        SI j == 5 ALORS{
         ecrire "Saisisser un salaire.";
         lire salaire;
-        tab[i][j]=salaire;
+        tab[i][j]←salaire;
         }FINSI       
     }FINPOUR    
 }FINPOUR
@@ -345,10 +349,10 @@ TANTQUE arret == "non" FAIRE{
     lire reponse;
     SÉLECTIONNER reponse {
          "afficher": affiche_employes(tab);
-         "ajouter": tab = ajouter_employes(tab);
-         "changer_le_salaire": tab = changer_salaire(tab);
+         "ajouter": tab ← ajouter_employes(tab);
+         "changer_le_salaire": tab ← changer_salaire(tab);
          "année": annee_employes(tab);
-         "ajouter_n": tab = n_ajouter_employes(tab);
+         "ajouter_n": tab ← n_ajouter_employes(tab);
          SINON
             ecrire "Je n'ai pas compris reéssayer plus tard";
     }FINSÉLECTIONNER
